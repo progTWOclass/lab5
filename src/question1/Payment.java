@@ -20,6 +20,6 @@ public class Payment {
 
     //methods
     public void paymentDetails(){
-        System.out.printf("the payment amount is %.2f ", getAmount());
+        System.out.printf("the payment amount is %.2f\n", getAmount());
     }
 }

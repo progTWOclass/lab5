@@ -1,14 +1,16 @@
 package question1;
 
+import java.sql.SQLOutput;
+
 public class CreditCardPayment extends Payment{
 
     //class variable
     protected String nameCard;
     protected String expirationDate;
-    protected int cardNumber;
+    protected String cardNumber;
 
     //constructor
-    public CreditCardPayment(String nameCard, String expirationDate, int cardNumber, double amount){
+    public CreditCardPayment(String nameCard, String expirationDate, String cardNumber, double amount){
         super(amount);
         this.nameCard = nameCard;
         this.expirationDate = expirationDate;
@@ -30,17 +32,18 @@ public class CreditCardPayment extends Payment{
         this.expirationDate = expirationDate;
     }
 
-    public int getCardNumber() {
+    public String getCardNumber() {
         return cardNumber;
     }
-    public void setCardNumber(int cardNumber) {
+    public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
 
     //methods
     @Override
     public void paymentDetails() {
-        System.out.println("Customer name: " + getAmount());
+        System.out.println("Paymant was done by credit card:");
+        System.out.println("Customer name: " + getNameCard());
         System.out.println("card expiration date: " + getExpirationDate());
         System.out.println("Customer cardNumber: " + getCardNumber());
 
